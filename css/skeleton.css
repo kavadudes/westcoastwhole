@@ -124,8 +124,11 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  background-image: url(../images/background.png);
+  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  color: #54453f; }
 
 
 /* Typography
@@ -162,6 +165,79 @@ a {
 a:hover {
   color: #0FA0CE; }
 
+
+
+
+/* Custom
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.img-fluid {
+  max-width: 100%;
+}
+
+
+.logo {
+  display: block;
+  margin: 3rem auto;
+  max-width: 250px;
+}
+
+.services {
+  margin: 2rem 0;
+  min-height: 200px;
+  text-align: center;
+}
+
+.services h5 {
+  font-size: 2.0rem;
+  font-weight: bolder;
+  border: 3px solid #5a4b44;
+  padding: 1rem;
+}
+
+.news-intro {
+  margin: 2rem 0;
+}
+
+footer {
+  background-color: white;
+  min-height: 200px;
+  padding: 7.5rem 0;
+  text-align: center;
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  color:white;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.ssl-logo {
+  max-width: 70px;
+}
+
+.cat {
+  position: relative;
+  min-height: 200px;
+  background-color: white;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.cat img {
+  max-width: 100%;
+}
+
+.cat h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.footer_contact {
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -206,8 +282,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #44592c;
+  border-color: #44592c; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
