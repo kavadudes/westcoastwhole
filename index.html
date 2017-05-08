@@ -95,7 +95,7 @@
       <div class="row">
         <div class="five columns">
 
-         <form class="" action="https://formspree.io/drummerdip@gmail.com" method="post">
+         <form class="form"  id="form" action="https://formspree.io/drummerdip@gmail.com" method="post">
            <label for="fullName">Full Name</label>
            <input type="text" name="fullName" value="">
            <label for="email" type="email">Email</label>
@@ -106,6 +106,7 @@
            <textarea name="message" rows="8" cols="30"></textarea>
            <input class="button-primary" type="submit" value="Submit">
          </form>
+         <div id="comfirm">this</div>
 
         </div>
         <div class="seven columns">
@@ -146,6 +147,21 @@ Information and statements about the products on this site have not been evaluat
     </div>
   </footer>
 
+  <!-- Footer Scripts -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js" integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    // bind 'myForm' and provide a simple callback function
+       $('#form').ajaxForm(function() {
+           $('#comfirm').html("your form has been sent");
+       });
+    </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
