@@ -163,18 +163,16 @@ Information and statements about the products on this site have not been evaluat
 
       var formData = $('#form').serializeArray();
 
-      var dataSend = {
-        name: formData[0]['value'],
-        email: formData[1]['value'],
-        phone: formData[2]['value'],
-        message: formData[3]['value']
-      };
-
       console.log(data);
       $.ajax({
          url: "https://formspree.io/drummerdip@gmail.com",
          method: "POST",
-         data: dataSend,
+         data: {
+           name: formData[0]['value'],
+           email: formData[1]['value'],
+           phone: formData[2]['value'],
+           message: formData[3]['value']
+         },
          dataType: "json"
       });
 
