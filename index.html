@@ -104,7 +104,7 @@
              <input type="text" name="phone" value="" placeholder="xxx-xxx-xxxx">
              <label for="message">How can we help you?</label>
              <textarea name="message" rows="8" cols="30"></textarea>
-             <input class="button-primary" type="submit" value="Submit">
+             <input id="submit" class="button-primary" type="submit" value="Submit">
            </form>
          </div>
 
@@ -154,13 +154,25 @@ Information and statements about the products on this site have not been evaluat
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js" integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer" crossorigin="anonymous"></script>
-
     <script type="text/javascript">
+
+
     // bind 'myForm' and provide a simple callback function
-       $('#form').ajaxForm(function() {
-           $('#comfirm').html("your form has been sent");
-       });
+    $('#submit').on('click', function(e){
+      e.preventDefault();
+
+      $.ajax({
+         url: "https://formspree.io/drummerdip@gmail.com",
+         method: "POST",
+         data: {message: "hello!"},
+         dataType: "json"
+      });
+
+    });
+
+
+
+
     </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
