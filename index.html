@@ -161,13 +161,24 @@ Information and statements about the products on this site have not been evaluat
     $('#submit').on('click', function(e){
       e.preventDefault();
 
+      var formData = $('#form').serializeArray();
+
+      var dataSend = {
+        name: formData[0]['value'],
+        email: formData[1]['value'],
+        phone: formData[2]['value'],
+        message: formData[3]['value']
+      };
+
+      console.log(data);
       $.ajax({
          url: "https://formspree.io/drummerdip@gmail.com",
          method: "POST",
-         data: {message: "hello!"},
+         data: dataSend,
          dataType: "json"
       });
 
+      $('#submit').html("<h3>Yuur Message has been Sent!</h3>");
     });
 
 
