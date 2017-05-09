@@ -164,7 +164,7 @@ Information and statements about the products on this site have not been evaluat
       var formData = $('#form').serializeArray();
 
       $.ajax({
-         url: "https://formspree.io/drummerdip@gmail.com",
+         url: "https://formspree.io/ivan@ivanvilla.com",
          method: "POST",
          data: {
            name: formData[0]['value'],
@@ -172,7 +172,10 @@ Information and statements about the products on this site have not been evaluat
            phone: formData[2]['value'],
            message: formData[3]['value']
          },
-         dataType: "json"
+         dataType: "json",
+         complete: function(){
+           $("#comfirm").html("<h2 class='comfirmText'>Message Sent</h2>");
+         }
       });
 
       $('#submit').html("<h3>Yuur Message has been Sent!</h3>");
