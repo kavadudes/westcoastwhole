@@ -469,6 +469,14 @@ hr {
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
+.comfirmText {
+  color: #44592c;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
