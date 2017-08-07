@@ -161,9 +161,13 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #666a3e;
+  transition: 300ms;
+  font-weight: bolder;
+}
 a:hover {
-  color: #0FA0CE; }
+  color: #555a2e;
+}
 
 
 
@@ -493,6 +497,17 @@ hr {
   /* Table
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+
+  /* random
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+  padding:0 0 3rem ;
+
+}
 
 
 /* Media Queries
